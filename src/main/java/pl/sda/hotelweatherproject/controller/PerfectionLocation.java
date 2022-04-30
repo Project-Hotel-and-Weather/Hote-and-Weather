@@ -1,16 +1,14 @@
 package pl.sda.hotelweatherproject.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.bind.annotation.RequestMapping;
 import pl.sda.hotelweatherproject.service.HotelService;
 import pl.sda.hotelweatherproject.service.WeatherService;
 
+import java.io.IOException;
 import java.util.Date;
 
 @Controller
@@ -26,16 +24,19 @@ public class PerfectionLocation {
         this.weatherService = weatherService;
     }
 
-    @GetMapping("/")
-    public String getHomePage(){
-        return index.html;
+    @RequestMapping("/")
+    public String getHomePage(Model model) throws IOException {
+        model.addAttribute("city","Chicago");
+        model.addAttribute("weather",weatherService.getWeatherInfo());
+        return "index";
     }
 
-    @GetMapping("/hotel?location={location}&date={date}")
-    public String getHotel(@PathVariable(value = "location") String location,
-                           @PathVariable(value = "date") Date date) {
-        hotelService.getHotelInfo(location, date);
-        weatherService.getWeatherInfo(location, date);
-        return hotels.html;
-    }
+//    @GetMapping("/hotel?location={location}&date={date}")
+//    public String getHotel(@PathVariable(value = "location") String location,
+//                           @PathVariable(value = "date") Date date) throws IOException {
+//        hotelService.getHotelInfo();
+//        weatherService.getWeatherInfo();
+//
+//    }
+//
 }

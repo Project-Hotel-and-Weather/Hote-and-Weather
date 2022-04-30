@@ -1,10 +1,10 @@
-
 package pl.sda.hotelweatherproject.dtos;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Generated;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "Comparison"
+        "Comparison"
 })
 @Generated("jsonschema2pojo")
 public class Prices {
@@ -29,19 +29,10 @@ public class Prices {
         return comparison;
     }
 
-    @JsonProperty("Comparison")
-    public void setComparison(List<List<Comparison>> comparison) {
-        this.comparison = comparison;
-    }
-
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 
 }

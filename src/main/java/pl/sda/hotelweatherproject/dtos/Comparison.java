@@ -31,29 +31,14 @@ public class Comparison {
         return hotelName;
     }
 
-    @JsonProperty("hotelName")
-    public void setHotelName(String hotelName) {
-        this.hotelName = hotelName;
-    }
-
     @JsonProperty("hotelId")
     public String getHotelId() {
         return hotelId;
     }
 
-    @JsonProperty("hotelId")
-    public void setHotelId(String hotelId) {
-        this.hotelId = hotelId;
-    }
-
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }
