@@ -1,1000 +1,1000 @@
 {
-    "Comparison": [
-        [
-            {
-                "hotelName": "      The Resident Covent Garden",
-                "hotelId": "15134890"
-            },
-            [
-                {
-                    "price1": "314",
-                    "tax1": "63",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "281",
-                    "tax2": "56",
-                    "vendor2": "Agoda.com"
-                },
-                {
-                    "price3": "292",
-                    "tax3": "58",
-                    "vendor3": "Destinia.com"
-                },
-                {
-                    "price4": "376",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Hotel 41",
-                "hotelId": "188961"
-            },
-            [
-                {
-                    "price1": null,
-                    "tax1": null,
-                    "vendor1": null
-                },
-                {
-                    "price2": null,
-                    "tax2": null,
-                    "vendor2": null
-                },
-                {
-                    "price3": null,
-                    "tax3": null,
-                    "vendor3": null
-                },
-                {
-                    "price4": null,
-                    "tax4": null,
-                    "vendor4": null
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Hari",
-                "hotelId": "2413342"
-            },
-            [
-                {
-                    "price1": "1879",
-                    "tax1": "489",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "1977",
-                    "tax2": "395",
-                    "vendor2": "Trip.com"
-                },
-                {
-                    "price3": "1881",
-                    "tax3": "489",
-                    "vendor3": "Agoda.com"
-                },
-                {
-                    "price4": null,
-                    "tax4": null,
-                    "vendor4": null
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Shangri-La The Shard, London",
-                "hotelId": "6484754"
-            },
-            [
-                {
-                    "price1": "710",
-                    "tax1": "142",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "709",
-                    "tax2": "142",
-                    "vendor2": "Expedia.it"
-                },
-                {
-                    "price3": "695",
-                    "tax3": "139",
-                    "vendor3": "Trip.com"
-                },
-                {
-                    "price4": "849",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Pan Pacific London",
-                "hotelId": "23274923"
-            },
-            [
-                {
-                    "price1": "327",
-                    "tax1": "66",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "328",
-                    "tax2": "66",
-                    "vendor2": "Agoda.com"
-                },
-                {
-                    "price3": "364",
-                    "tax3": "73",
-                    "vendor3": "Official Site"
-                },
-                {
-                    "price4": "325",
-                    "tax4": "65",
-                    "vendor4": "Destinia.com"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Milestone Hotel and Residences",
-                "hotelId": "193121"
-            },
-            [
-                {
-                    "price1": "467",
-                    "tax1": "93",
-                    "vendor1": "The Milestone"
-                },
-                {
-                    "price2": "467",
-                    "tax2": "93",
-                    "vendor2": "Expedia.it"
-                },
-                {
-                    "price3": "467",
-                    "tax3": "93",
-                    "vendor3": "Hotels.com"
-                },
-                {
-                    "price4": "467",
-                    "tax4": "93",
-                    "vendor4": "FindHotel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Royal Lancaster London",
-                "hotelId": "195284"
-            },
-            [
-                {
-                    "price1": "352",
-                    "tax1": "70",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "299",
-                    "tax2": "60",
-                    "vendor2": "Preferred Hotels"
-                },
-                {
-                    "price3": "296",
-                    "tax3": "59",
-                    "vendor3": "Trip.com"
-                },
-                {
-                    "price4": "375",
-                    "tax4": "47",
-                    "vendor4": "ZenHotels.com"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Bankside Hotel",
-                "hotelId": "15100964"
-            },
-            [
-                {
-                    "price1": "454",
-                    "tax1": "91",
-                    "vendor1": "Autograph"
-                },
-                {
-                    "price2": "454",
-                    "tax2": "91",
-                    "vendor2": "Booking.com"
-                },
-                {
-                    "price3": "454",
-                    "tax3": "91",
-                    "vendor3": "FindHotel"
-                },
-                {
-                    "price4": "513",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Egerton House Hotel",
-                "hotelId": "192122"
-            },
-            [
-                {
-                    "price1": "410",
-                    "tax1": "82",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "410",
-                    "tax2": "82",
-                    "vendor2": "Hotels.com"
-                },
-                {
-                    "price3": "410",
-                    "tax3": "82",
-                    "vendor3": "Agoda.com"
-                },
-                {
-                    "price4": "492",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Montague on The Gardens",
-                "hotelId": "192036"
-            },
-            [
-                {
-                    "price1": "256",
-                    "tax1": "51",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "256",
-                    "tax2": "51",
-                    "vendor2": "Montague Hotel"
-                },
-                {
-                    "price3": "256",
-                    "tax3": "51",
-                    "vendor3": "Agoda.com"
-                },
-                {
-                    "price4": "307",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      One Aldwych",
-                "hotelId": "188036"
-            },
-            [
-                {
-                    "price1": "607",
-                    "tax1": "121",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "607",
-                    "tax2": "122",
-                    "vendor2": "Agoda.com"
-                },
-                {
-                    "price3": "607",
-                    "tax3": "121",
-                    "vendor3": "Expedia.it"
-                },
-                {
-                    "price4": "728",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Resident Victoria",
-                "hotelId": "8625676"
-            },
-            [
-                {
-                    "price1": "207",
-                    "tax1": "41",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "192",
-                    "tax2": "38",
-                    "vendor2": "Destinia.com"
-                },
-                {
-                    "price3": "185",
-                    "tax3": "37",
-                    "vendor3": "Agoda.com"
-                },
-                {
-                    "price4": "248",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Wilde Aparthotels by Staycity - Aldgate Tower Bridge",
-                "hotelId": "23500323"
-            },
-            [
-                {
-                    "price1": "170",
-                    "tax1": "0",
-                    "vendor1": "Official Site"
-                },
-                {
-                    "price2": "170",
-                    "tax2": "34",
-                    "vendor2": "Hotels.com"
-                },
-                {
-                    "price3": "142",
-                    "tax3": "28",
-                    "vendor3": "Agoda.com"
-                },
-                {
-                    "price4": "155",
-                    "tax4": "31",
-                    "vendor4": "Destinia.com"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Canopy By Hilton London City",
-                "hotelId": "23246836"
-            },
-            [
-                {
-                    "price1": "169",
-                    "tax1": "34",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "169",
-                    "tax2": "34",
-                    "vendor2": "Hotels.com"
-                },
-                {
-                    "price3": "169",
-                    "tax3": "34",
-                    "vendor3": "Expedia.it"
-                },
-                {
-                    "price4": "169",
-                    "tax4": "34",
-                    "vendor4": "FindHotel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Claridge's",
-                "hotelId": "187685"
-            },
-            [
-                {
-                    "price1": "995",
-                    "tax1": "199",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "995",
-                    "tax2": "199",
-                    "vendor2": "Expedia.it"
-                },
-                {
-                    "price3": "995",
-                    "tax3": "199",
-                    "vendor3": "Trip.com"
-                },
-                {
-                    "price4": "1194",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Hotel Cafe Royal",
-                "hotelId": "586582"
-            },
-            [
-                {
-                    "price1": "723",
-                    "tax1": "145",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "649",
-                    "tax2": "130",
-                    "vendor2": "Destinia.com"
-                },
-                {
-                    "price3": "577",
-                    "tax3": "115",
-                    "vendor3": "FindHotel"
-                },
-                {
-                    "price4": "868",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Brown's Hotel",
-                "hotelId": "188019"
-            },
-            [
-                {
-                    "price1": "963",
-                    "tax1": "193",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "866",
-                    "tax2": "173",
-                    "vendor2": "Expedia.it"
-                },
-                {
-                    "price3": "723",
-                    "tax3": "145",
-                    "vendor3": "Agoda.com"
-                },
-                {
-                    "price4": "1032",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Chesterfield Mayfair",
-                "hotelId": "192064"
-            },
-            [
-                {
-                    "price1": "332",
-                    "tax1": "66",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "333",
-                    "tax2": "67",
-                    "vendor2": "Agoda.com"
-                },
-                {
-                    "price3": "332",
-                    "tax3": "66",
-                    "vendor3": "Hotels.com"
-                },
-                {
-                    "price4": "399",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Connaught",
-                "hotelId": "187991"
-            },
-            [
-                {
-                    "price1": "905",
-                    "tax1": "181",
-                    "vendor1": "Trip.com"
-                },
-                {
-                    "price2": "839",
-                    "tax2": "168",
-                    "vendor2": "Agoda.com"
-                },
-                {
-                    "price3": "1117",
-                    "tax3": "0",
-                    "vendor3": "Lol.travel"
-                },
-                {
-                    "price4": null,
-                    "tax4": null,
-                    "vendor4": null
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Kensington",
-                "hotelId": "1371050"
-            },
-            [
-                {
-                    "price1": "378",
-                    "tax1": "76",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "378",
-                    "tax2": "76",
-                    "vendor2": "Trip.com"
-                },
-                {
-                    "price3": "334",
-                    "tax3": "67",
-                    "vendor3": "Agoda.com"
-                },
-                {
-                    "price4": "448",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Roseate House London",
-                "hotelId": "193165"
-            },
-            [
-                {
-                    "price1": "173",
-                    "tax1": "35",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "143",
-                    "tax2": "29",
-                    "vendor2": "Destinia.com"
-                },
-                {
-                    "price3": "252",
-                    "tax3": "0",
-                    "vendor3": "Hotel Website"
-                },
-                {
-                    "price4": null,
-                    "tax4": null,
-                    "vendor4": null
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Resident Soho",
-                "hotelId": "4062677"
-            },
-            [
-                {
-                    "price1": "245",
-                    "tax1": "49",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "222",
-                    "tax2": "44",
-                    "vendor2": "FindHotel"
-                },
-                {
-                    "price3": "228",
-                    "tax3": "46",
-                    "vendor3": "Destinia.com"
-                },
-                {
-                    "price4": "222",
-                    "tax4": "44",
-                    "vendor4": "Etrip"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Montcalm Royal London House",
-                "hotelId": "10810215"
-            },
-            [
-                {
-                    "price1": "302",
-                    "tax1": "67",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "332",
-                    "tax2": "66",
-                    "vendor2": "Destinia.com"
-                },
-                {
-                    "price3": "202",
-                    "tax3": "76",
-                    "vendor3": "Montcalm.co.uk"
-                },
-                {
-                    "price4": "358",
-                    "tax4": "45",
-                    "vendor4": "ZenHotels.com"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Stafford London",
-                "hotelId": "187570"
-            },
-            [
-                {
-                    "price1": "546",
-                    "tax1": "109",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "546",
-                    "tax2": "109",
-                    "vendor2": "Agoda.com"
-                },
-                {
-                    "price3": "537",
-                    "tax3": "107",
-                    "vendor3": "Hotels.com"
-                },
-                {
-                    "price4": "658",
-                    "tax4": "82",
-                    "vendor4": "ZenHotels.com"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Holmes Hotel London",
-                "hotelId": "193047"
-            },
-            [
-                {
-                    "price1": "355",
-                    "tax1": "71",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "355",
-                    "tax2": "71",
-                    "vendor2": "Hotels.com"
-                },
-                {
-                    "price3": "334",
-                    "tax3": "42",
-                    "vendor3": "ZenHotels.com"
-                },
-                {
-                    "price4": "441",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Marylebone",
-                "hotelId": "193617"
-            },
-            [
-                {
-                    "price1": "396",
-                    "tax1": "79",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "396",
-                    "tax2": "79",
-                    "vendor2": "Expedia.it"
-                },
-                {
-                    "price3": "349",
-                    "tax3": "70",
-                    "vendor3": "Agoda.com"
-                },
-                {
-                    "price4": "475",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Vintry & Mercer",
-                "hotelId": "13126259"
-            },
-            [
-                {
-                    "price1": "273",
-                    "tax1": "55",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "273",
-                    "tax2": "55",
-                    "vendor2": "FindHotel"
-                },
-                {
-                    "price3": "230",
-                    "tax3": "46",
-                    "vendor3": "Agoda.com"
-                },
-                {
-                    "price4": "327",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Corinthia London",
-                "hotelId": "1845678"
-            },
-            [
-                {
-                    "price1": "1175",
-                    "tax1": "235",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "1175",
-                    "tax2": "235",
-                    "vendor2": "Expedia.it"
-                },
-                {
-                    "price3": "1059",
-                    "tax3": "212",
-                    "vendor3": "Trip.com"
-                },
-                {
-                    "price4": "1503",
-                    "tax4": "188",
-                    "vendor4": "ZenHotels.com"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      Batty Langley's",
-                "hotelId": "8009809"
-            },
-            [
-                {
-                    "price1": "245",
-                    "tax1": "49",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "245",
-                    "tax2": "49",
-                    "vendor2": "Agoda.com"
-                },
-                {
-                    "price3": "239",
-                    "tax3": "48",
-                    "vendor3": "Trip.com"
-                },
-                {
-                    "price4": "294",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
-        [
-            {
-                "hotelName": "      The Beaumont",
-                "hotelId": "6003130"
-            },
-            [
-                {
-                    "price1": "723",
-                    "tax1": "145",
-                    "vendor1": "Booking.com"
-                },
-                {
-                    "price2": "722",
-                    "tax2": "144",
-                    "vendor2": "Sito ufficiale"
-                },
-                {
-                    "price3": "723",
-                    "tax3": "145",
-                    "vendor3": "FindHotel"
-                },
-                {
-                    "price4": "868",
-                    "tax4": "0",
-                    "vendor4": "Lol.travel"
-                },
-                {
-                    "price5": null,
-                    "tax5": null,
-                    "vendor5": null
-                }
-            ]
-        ],
+  "Comparison": [
+    [
+      {
+        "hotelName": "      The Resident Covent Garden",
+        "hotelId": "15134890"
+      },
+      [
         {
-            "totalHotelsCount": null,
-            "currentPageNumber": null,
-            "totalpageCount": "6",
-            "currentPageHotelsCount": 30
+          "price1": "314",
+          "tax1": "63",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "281",
+          "tax2": "56",
+          "vendor2": "Agoda.com"
+        },
+        {
+          "price3": "292",
+          "tax3": "58",
+          "vendor3": "Destinia.com"
+        },
+        {
+          "price4": "376",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
         }
-    ]
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Hotel 41",
+        "hotelId": "188961"
+      },
+      [
+        {
+          "price1": null,
+          "tax1": null,
+          "vendor1": null
+        },
+        {
+          "price2": null,
+          "tax2": null,
+          "vendor2": null
+        },
+        {
+          "price3": null,
+          "tax3": null,
+          "vendor3": null
+        },
+        {
+          "price4": null,
+          "tax4": null,
+          "vendor4": null
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Hari",
+        "hotelId": "2413342"
+      },
+      [
+        {
+          "price1": "1879",
+          "tax1": "489",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "1977",
+          "tax2": "395",
+          "vendor2": "Trip.com"
+        },
+        {
+          "price3": "1881",
+          "tax3": "489",
+          "vendor3": "Agoda.com"
+        },
+        {
+          "price4": null,
+          "tax4": null,
+          "vendor4": null
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Shangri-La The Shard, London",
+        "hotelId": "6484754"
+      },
+      [
+        {
+          "price1": "710",
+          "tax1": "142",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "709",
+          "tax2": "142",
+          "vendor2": "Expedia.it"
+        },
+        {
+          "price3": "695",
+          "tax3": "139",
+          "vendor3": "Trip.com"
+        },
+        {
+          "price4": "849",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Pan Pacific London",
+        "hotelId": "23274923"
+      },
+      [
+        {
+          "price1": "327",
+          "tax1": "66",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "328",
+          "tax2": "66",
+          "vendor2": "Agoda.com"
+        },
+        {
+          "price3": "364",
+          "tax3": "73",
+          "vendor3": "Official Site"
+        },
+        {
+          "price4": "325",
+          "tax4": "65",
+          "vendor4": "Destinia.com"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Milestone Hotel and Residences",
+        "hotelId": "193121"
+      },
+      [
+        {
+          "price1": "467",
+          "tax1": "93",
+          "vendor1": "The Milestone"
+        },
+        {
+          "price2": "467",
+          "tax2": "93",
+          "vendor2": "Expedia.it"
+        },
+        {
+          "price3": "467",
+          "tax3": "93",
+          "vendor3": "Hotels.com"
+        },
+        {
+          "price4": "467",
+          "tax4": "93",
+          "vendor4": "FindHotel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Royal Lancaster London",
+        "hotelId": "195284"
+      },
+      [
+        {
+          "price1": "352",
+          "tax1": "70",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "299",
+          "tax2": "60",
+          "vendor2": "Preferred Hotels"
+        },
+        {
+          "price3": "296",
+          "tax3": "59",
+          "vendor3": "Trip.com"
+        },
+        {
+          "price4": "375",
+          "tax4": "47",
+          "vendor4": "ZenHotels.com"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Bankside Hotel",
+        "hotelId": "15100964"
+      },
+      [
+        {
+          "price1": "454",
+          "tax1": "91",
+          "vendor1": "Autograph"
+        },
+        {
+          "price2": "454",
+          "tax2": "91",
+          "vendor2": "Booking.com"
+        },
+        {
+          "price3": "454",
+          "tax3": "91",
+          "vendor3": "FindHotel"
+        },
+        {
+          "price4": "513",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Egerton House Hotel",
+        "hotelId": "192122"
+      },
+      [
+        {
+          "price1": "410",
+          "tax1": "82",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "410",
+          "tax2": "82",
+          "vendor2": "Hotels.com"
+        },
+        {
+          "price3": "410",
+          "tax3": "82",
+          "vendor3": "Agoda.com"
+        },
+        {
+          "price4": "492",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Montague on The Gardens",
+        "hotelId": "192036"
+      },
+      [
+        {
+          "price1": "256",
+          "tax1": "51",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "256",
+          "tax2": "51",
+          "vendor2": "Montague Hotel"
+        },
+        {
+          "price3": "256",
+          "tax3": "51",
+          "vendor3": "Agoda.com"
+        },
+        {
+          "price4": "307",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      One Aldwych",
+        "hotelId": "188036"
+      },
+      [
+        {
+          "price1": "607",
+          "tax1": "121",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "607",
+          "tax2": "122",
+          "vendor2": "Agoda.com"
+        },
+        {
+          "price3": "607",
+          "tax3": "121",
+          "vendor3": "Expedia.it"
+        },
+        {
+          "price4": "728",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Resident Victoria",
+        "hotelId": "8625676"
+      },
+      [
+        {
+          "price1": "207",
+          "tax1": "41",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "192",
+          "tax2": "38",
+          "vendor2": "Destinia.com"
+        },
+        {
+          "price3": "185",
+          "tax3": "37",
+          "vendor3": "Agoda.com"
+        },
+        {
+          "price4": "248",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Wilde Aparthotels by Staycity - Aldgate Tower Bridge",
+        "hotelId": "23500323"
+      },
+      [
+        {
+          "price1": "170",
+          "tax1": "0",
+          "vendor1": "Official Site"
+        },
+        {
+          "price2": "170",
+          "tax2": "34",
+          "vendor2": "Hotels.com"
+        },
+        {
+          "price3": "142",
+          "tax3": "28",
+          "vendor3": "Agoda.com"
+        },
+        {
+          "price4": "155",
+          "tax4": "31",
+          "vendor4": "Destinia.com"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Canopy By Hilton London City",
+        "hotelId": "23246836"
+      },
+      [
+        {
+          "price1": "169",
+          "tax1": "34",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "169",
+          "tax2": "34",
+          "vendor2": "Hotels.com"
+        },
+        {
+          "price3": "169",
+          "tax3": "34",
+          "vendor3": "Expedia.it"
+        },
+        {
+          "price4": "169",
+          "tax4": "34",
+          "vendor4": "FindHotel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Claridge's",
+        "hotelId": "187685"
+      },
+      [
+        {
+          "price1": "995",
+          "tax1": "199",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "995",
+          "tax2": "199",
+          "vendor2": "Expedia.it"
+        },
+        {
+          "price3": "995",
+          "tax3": "199",
+          "vendor3": "Trip.com"
+        },
+        {
+          "price4": "1194",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Hotel Cafe Royal",
+        "hotelId": "586582"
+      },
+      [
+        {
+          "price1": "723",
+          "tax1": "145",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "649",
+          "tax2": "130",
+          "vendor2": "Destinia.com"
+        },
+        {
+          "price3": "577",
+          "tax3": "115",
+          "vendor3": "FindHotel"
+        },
+        {
+          "price4": "868",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Brown's Hotel",
+        "hotelId": "188019"
+      },
+      [
+        {
+          "price1": "963",
+          "tax1": "193",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "866",
+          "tax2": "173",
+          "vendor2": "Expedia.it"
+        },
+        {
+          "price3": "723",
+          "tax3": "145",
+          "vendor3": "Agoda.com"
+        },
+        {
+          "price4": "1032",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Chesterfield Mayfair",
+        "hotelId": "192064"
+      },
+      [
+        {
+          "price1": "332",
+          "tax1": "66",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "333",
+          "tax2": "67",
+          "vendor2": "Agoda.com"
+        },
+        {
+          "price3": "332",
+          "tax3": "66",
+          "vendor3": "Hotels.com"
+        },
+        {
+          "price4": "399",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Connaught",
+        "hotelId": "187991"
+      },
+      [
+        {
+          "price1": "905",
+          "tax1": "181",
+          "vendor1": "Trip.com"
+        },
+        {
+          "price2": "839",
+          "tax2": "168",
+          "vendor2": "Agoda.com"
+        },
+        {
+          "price3": "1117",
+          "tax3": "0",
+          "vendor3": "Lol.travel"
+        },
+        {
+          "price4": null,
+          "tax4": null,
+          "vendor4": null
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Kensington",
+        "hotelId": "1371050"
+      },
+      [
+        {
+          "price1": "378",
+          "tax1": "76",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "378",
+          "tax2": "76",
+          "vendor2": "Trip.com"
+        },
+        {
+          "price3": "334",
+          "tax3": "67",
+          "vendor3": "Agoda.com"
+        },
+        {
+          "price4": "448",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Roseate House London",
+        "hotelId": "193165"
+      },
+      [
+        {
+          "price1": "173",
+          "tax1": "35",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "143",
+          "tax2": "29",
+          "vendor2": "Destinia.com"
+        },
+        {
+          "price3": "252",
+          "tax3": "0",
+          "vendor3": "Hotel Website"
+        },
+        {
+          "price4": null,
+          "tax4": null,
+          "vendor4": null
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Resident Soho",
+        "hotelId": "4062677"
+      },
+      [
+        {
+          "price1": "245",
+          "tax1": "49",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "222",
+          "tax2": "44",
+          "vendor2": "FindHotel"
+        },
+        {
+          "price3": "228",
+          "tax3": "46",
+          "vendor3": "Destinia.com"
+        },
+        {
+          "price4": "222",
+          "tax4": "44",
+          "vendor4": "Etrip"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Montcalm Royal London House",
+        "hotelId": "10810215"
+      },
+      [
+        {
+          "price1": "302",
+          "tax1": "67",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "332",
+          "tax2": "66",
+          "vendor2": "Destinia.com"
+        },
+        {
+          "price3": "202",
+          "tax3": "76",
+          "vendor3": "Montcalm.co.uk"
+        },
+        {
+          "price4": "358",
+          "tax4": "45",
+          "vendor4": "ZenHotels.com"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Stafford London",
+        "hotelId": "187570"
+      },
+      [
+        {
+          "price1": "546",
+          "tax1": "109",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "546",
+          "tax2": "109",
+          "vendor2": "Agoda.com"
+        },
+        {
+          "price3": "537",
+          "tax3": "107",
+          "vendor3": "Hotels.com"
+        },
+        {
+          "price4": "658",
+          "tax4": "82",
+          "vendor4": "ZenHotels.com"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Holmes Hotel London",
+        "hotelId": "193047"
+      },
+      [
+        {
+          "price1": "355",
+          "tax1": "71",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "355",
+          "tax2": "71",
+          "vendor2": "Hotels.com"
+        },
+        {
+          "price3": "334",
+          "tax3": "42",
+          "vendor3": "ZenHotels.com"
+        },
+        {
+          "price4": "441",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Marylebone",
+        "hotelId": "193617"
+      },
+      [
+        {
+          "price1": "396",
+          "tax1": "79",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "396",
+          "tax2": "79",
+          "vendor2": "Expedia.it"
+        },
+        {
+          "price3": "349",
+          "tax3": "70",
+          "vendor3": "Agoda.com"
+        },
+        {
+          "price4": "475",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Vintry & Mercer",
+        "hotelId": "13126259"
+      },
+      [
+        {
+          "price1": "273",
+          "tax1": "55",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "273",
+          "tax2": "55",
+          "vendor2": "FindHotel"
+        },
+        {
+          "price3": "230",
+          "tax3": "46",
+          "vendor3": "Agoda.com"
+        },
+        {
+          "price4": "327",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Corinthia London",
+        "hotelId": "1845678"
+      },
+      [
+        {
+          "price1": "1175",
+          "tax1": "235",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "1175",
+          "tax2": "235",
+          "vendor2": "Expedia.it"
+        },
+        {
+          "price3": "1059",
+          "tax3": "212",
+          "vendor3": "Trip.com"
+        },
+        {
+          "price4": "1503",
+          "tax4": "188",
+          "vendor4": "ZenHotels.com"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      Batty Langley's",
+        "hotelId": "8009809"
+      },
+      [
+        {
+          "price1": "245",
+          "tax1": "49",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "245",
+          "tax2": "49",
+          "vendor2": "Agoda.com"
+        },
+        {
+          "price3": "239",
+          "tax3": "48",
+          "vendor3": "Trip.com"
+        },
+        {
+          "price4": "294",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    [
+      {
+        "hotelName": "      The Beaumont",
+        "hotelId": "6003130"
+      },
+      [
+        {
+          "price1": "723",
+          "tax1": "145",
+          "vendor1": "Booking.com"
+        },
+        {
+          "price2": "722",
+          "tax2": "144",
+          "vendor2": "Sito ufficiale"
+        },
+        {
+          "price3": "723",
+          "tax3": "145",
+          "vendor3": "FindHotel"
+        },
+        {
+          "price4": "868",
+          "tax4": "0",
+          "vendor4": "Lol.travel"
+        },
+        {
+          "price5": null,
+          "tax5": null,
+          "vendor5": null
+        }
+      ]
+    ],
+    {
+      "totalHotelsCount": null,
+      "currentPageNumber": null,
+      "totalpageCount": "6",
+      "currentPageHotelsCount": 30
+    }
+  ]
 }
