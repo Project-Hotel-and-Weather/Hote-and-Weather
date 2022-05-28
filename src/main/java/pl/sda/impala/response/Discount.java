@@ -1,6 +1,34 @@
+
 package pl.sda.impala.response;
 
+import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+@Generated("jsonschema2pojo")
 public class Discount {
-    public String type;
-    public int count;
+
+    @SerializedName("type")
+    @Expose
+    private String type;
+    @SerializedName("count")
+    @Expose
+    private Integer count;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
 }

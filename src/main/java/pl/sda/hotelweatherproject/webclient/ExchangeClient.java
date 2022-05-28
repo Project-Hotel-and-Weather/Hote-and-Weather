@@ -9,7 +9,6 @@ public class ExchangeClient {
      private RestTemplate restTemplate = new RestTemplate();
 
      public String getExchangeForCurrency(String code){
-         String codeUSD = "USD";
-         return restTemplate.getForObject(EXCHANGE_URL + "{table}/{code}/?format=json", String.class,"A", codeUSD);
+         return restTemplate.getForObject(EXCHANGE_URL + "{table}/{code}/?format=json", String.class,"A", code);
      }
 }

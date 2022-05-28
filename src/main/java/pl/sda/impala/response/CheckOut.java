@@ -1,8 +1,23 @@
+
 package pl.sda.impala.response;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
+@Generated("jsonschema2pojo")
 public class CheckOut {
-    @JsonProperty("to")
-    public String myto;
+
+    @SerializedName("to")
+    @Expose
+    private String to;
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
+    }
+
 }

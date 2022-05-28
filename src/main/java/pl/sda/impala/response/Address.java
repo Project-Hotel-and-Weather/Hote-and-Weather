@@ -1,15 +1,89 @@
+
 package pl.sda.impala.response;
 
-// import com.fasterxml.jackson.databind.ObjectMapper; // version 2.11.1
-// import com.fasterxml.jackson.annotation.JsonProperty; // version 2.11.1
-/* ObjectMapper om = new ObjectMapper();
-Root root = om.readValue(myJsonString, Root.class); */
+import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+@Generated("jsonschema2pojo")
 public class Address {
-    public String line1;
-    public Object line2;
-    public String city;
-    public String postalCode;
-    public String region;
-    public String country;
-    public String countryName;
+
+    @SerializedName("line1")
+    @Expose
+    private String line1;
+    @SerializedName("line2")
+    @Expose
+    private Object line2;
+    @SerializedName("city")
+    @Expose
+    private String city;
+    @SerializedName("postalCode")
+    @Expose
+    private String postalCode;
+    @SerializedName("region")
+    @Expose
+    private String region;
+    @SerializedName("country")
+    @Expose
+    private String country;
+    @SerializedName("countryName")
+    @Expose
+    private String countryName;
+
+    public String getLine1() {
+        return line1;
+    }
+
+    public void setLine1(String line1) {
+        this.line1 = line1;
+    }
+
+    public Object getLine2() {
+        return line2;
+    }
+
+    public void setLine2(Object line2) {
+        this.line2 = line2;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
 }

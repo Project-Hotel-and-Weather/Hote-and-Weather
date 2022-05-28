@@ -6,7 +6,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("jsonschema2pojo")
-public class Image {
+public class Image__1 {
 
     @SerializedName("altText")
     @Expose
@@ -20,9 +20,6 @@ public class Image {
     @SerializedName("url")
     @Expose
     private String url;
-    @SerializedName("isHeroImage")
-    @Expose
-    private Boolean isHeroImage;
 
     public Object getAltText() {
         return altText;
@@ -54,14 +51,6 @@ public class Image {
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    public Boolean getIsHeroImage() {
-        return isHeroImage;
-    }
-
-    public void setIsHeroImage(Boolean isHeroImage) {
-        this.isHeroImage = isHeroImage;
     }
 
 }

@@ -6,18 +6,18 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("jsonschema2pojo")
-public class CheckIn {
+public class Currency__1 {
 
-    @SerializedName("from")
+    @SerializedName("code")
     @Expose
-    private String from;
+    private String code;
 
-    public String getFrom() {
-        return from;
+    public String getCode() {
+        return code;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setCode(String code) {
+        this.code = code;
     }
 
 }
