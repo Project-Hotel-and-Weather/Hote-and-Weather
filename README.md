@@ -1,1 +1,1 @@
-# Hote-and-Weather
+# Hotel-and-Weather
