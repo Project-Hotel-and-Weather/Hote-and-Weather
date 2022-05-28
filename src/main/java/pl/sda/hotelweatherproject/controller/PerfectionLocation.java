@@ -1,5 +1,6 @@
 package pl.sda.hotelweatherproject.controller;
 
+import net.minidev.json.parser.ParseException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,6 @@ public class PerfectionLocation {
     private final HotelService hotelService;
     private final WeatherService weatherService;
 
-    private final String secretWeather = "2d75c857e890f7742729cf3b29c7631f";
 
     public PerfectionLocation(HotelService hotelService, WeatherService weatherService) {
         this.hotelService = hotelService;
@@ -25,9 +25,9 @@ public class PerfectionLocation {
     }
 
     @RequestMapping("/")
-    public String getHomePage(Model model) throws IOException {
-        model.addAttribute("city","Chicago");
-        model.addAttribute("weather",weatherService.getWeatherInfo());
+    public String getHomePage(Model model) throws IOException, ParseException {
+        model.addAttribute("city",hotelService.getHotelInfo());
+        model.addAttribute("weather", weatherService.getWeatherInfo());
         return "index";
     }
 
