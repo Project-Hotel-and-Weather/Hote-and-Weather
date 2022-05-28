@@ -1,16 +1,12 @@
 package pl.sda.hotelweatherproject.controller;
 
-import net.minidev.json.parser.ParseException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.sda.hotelweatherproject.service.HotelService;
 import pl.sda.hotelweatherproject.service.WeatherService;
 
 import java.io.IOException;
-import java.util.Date;
 
 @Controller
 public class PerfectionLocation {
@@ -25,7 +21,7 @@ public class PerfectionLocation {
     }
 
     @RequestMapping("/")
-    public String getHomePage(Model model) throws IOException, ParseException {
+    public String getHomePage(Model model) throws IOException {
         model.addAttribute("city",hotelService.getHotelInfo());
         model.addAttribute("weather", weatherService.getWeatherInfo());
         return "index";
