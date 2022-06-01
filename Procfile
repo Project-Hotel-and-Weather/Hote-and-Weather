@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -war target/hotel-weather-project-0.0.1-SNAPSHOT.war
+web: java -Dserver.port=$PORT -jar target/hotel-weather-project-0.0.1-SNAPSHOT.jar

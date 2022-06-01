@@ -11,7 +11,7 @@
     <groupId>pl.sda</groupId>
     <artifactId>hotel-weather-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>hotel-weather-project</name>
     <description>hotel-weather-project</description>
     <properties>
