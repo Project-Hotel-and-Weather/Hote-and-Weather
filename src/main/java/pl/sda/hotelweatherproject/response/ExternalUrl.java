@@ -1,5 +1,5 @@
 
-package pl.sda.impala.response;
+package pl.sda.hotelweatherproject.response;
 
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;

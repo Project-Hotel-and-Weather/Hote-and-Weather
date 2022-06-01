@@ -6,14 +6,13 @@ import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.sda.hotelweatherproject.dtos.Example;
+import pl.sda.hotelweatherproject.response.*;
 import pl.sda.hotelweatherproject.webclient.ExchangeClient;
 import pl.sda.hotelweatherproject.webclient.HotelClient;
-import pl.sda.impala.response.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.DecimalFormat;
 
 @Service
 @RequiredArgsConstructor
@@ -31,8 +30,12 @@ public class HotelService {
         String name = "";
         String code = "";
         Integer amount = 0;
+        Double longitude = 0.0;
+        Double latitude = 0.0;
         for (Datum datum : response.getData()) {
             name = datum.getName();
+            latitude = datum.getLocation().getLatitude();
+            longitude = datum.getLocation().getLongitude();
             for (RoomType roomtype : datum.getRoomTypes()) {
                 for (Rates rates : roomtype.getRates()) {
                     for (CancellationPolicy cancellationPolicies : rates.getCancellationPolicies()) {

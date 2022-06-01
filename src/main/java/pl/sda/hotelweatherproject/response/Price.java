@@ -1,19 +1,19 @@
 
-package pl.sda.impala.response;
+package pl.sda.hotelweatherproject.response;
 
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("jsonschema2pojo")
-public class Total {
+public class Price {
 
     @SerializedName("amount")
     @Expose
     private Integer amount;
     @SerializedName("currency")
     @Expose
-    private Currency currency;
+    private Currency__1 currency;
 
     public Integer getAmount() {
         return amount;
@@ -23,11 +23,11 @@ public class Total {
         this.amount = amount;
     }
 
-    public Currency getCurrency() {
+    public Currency__1 getCurrency() {
         return currency;
     }
 
-    public void setCurrency(Currency currency) {
+    public void setCurrency(Currency__1 currency) {
         this.currency = currency;
     }
 

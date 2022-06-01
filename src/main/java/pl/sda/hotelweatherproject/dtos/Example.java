@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import pl.sda.impala.response.Rates;
 
 import javax.annotation.Generated;
 import java.util.List;

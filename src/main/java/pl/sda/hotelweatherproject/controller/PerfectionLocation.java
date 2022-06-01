@@ -2,7 +2,9 @@ package pl.sda.hotelweatherproject.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import pl.sda.hotelweatherproject.service.HotelService;
 import pl.sda.hotelweatherproject.service.WeatherService;
 
@@ -20,11 +22,11 @@ public class PerfectionLocation {
         this.weatherService = weatherService;
     }
 
-    @RequestMapping("/")
-    public String getHomePage(Model model) throws IOException {
-        model.addAttribute("city",hotelService.getHotelInfo());
-        model.addAttribute("weather", weatherService.getWeatherInfo());
-        return "index";
+    @GetMapping("/search")
+    public String getHomePage(
+            @RequestParam Double longitude,
+            @RequestParam Double latitude) throws IOException {
+        return hotelService.getHotelInfo() + weatherService.getWeatherInfo();
     }
 
 //    @GetMapping("/hotel?location={location}&date={date}")

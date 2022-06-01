@@ -1,4 +1,4 @@
-package pl.sda.impala.response;
+package pl.sda.hotelweatherproject.response;
 
 import java.util.ArrayList;
 
