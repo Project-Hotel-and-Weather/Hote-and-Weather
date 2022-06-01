@@ -29,6 +29,7 @@ public class HotelService {
         Response response = gson.fromJson(bufferedReader, Response.class);
         String name = "";
         String code = "";
+
         Integer amount = 0;
         Double longitude = 0.0;
         Double latitude = 0.0;
