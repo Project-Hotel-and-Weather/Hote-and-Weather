@@ -11,7 +11,7 @@
     <groupId>pl.sda</groupId>
     <artifactId>hotel-weather-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <name>hotel-weather-project</name>
     <description>hotel-weather-project</description>
     <properties>
@@ -100,6 +100,14 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>0.3.0</version>
+                <configuration>
+                    <appName>hotel-and-weather</appName>
                 </configuration>
             </plugin>
         </plugins>
