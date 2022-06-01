@@ -46,7 +46,7 @@ public class HotelService {
             }
         }
         Double price = convertCurrency(code, amount);
-        return name + " " + code + " " + price;
+        return name + price;
     }
 
     public Double convertCurrency(String code, Integer amount) throws JsonProcessingException {

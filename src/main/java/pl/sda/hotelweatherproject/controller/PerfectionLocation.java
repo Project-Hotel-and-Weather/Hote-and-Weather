@@ -5,12 +5,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import pl.sda.hotelweatherproject.service.HotelService;
 import pl.sda.hotelweatherproject.service.WeatherService;
 
 import java.io.IOException;
 
-@Controller
+@RestController
 public class PerfectionLocation {
 
     private final HotelService hotelService;
@@ -24,8 +25,9 @@ public class PerfectionLocation {
 
     @GetMapping("/")
     public String getHomePage(
-            @RequestParam Double longitude,
-            @RequestParam Double latitude) throws IOException {
+//            @RequestParam Double longitude,
+//            @RequestParam Double latitude)
+    )throws IOException {
         return hotelService.getHotelInfo() + weatherService.getWeatherInfo();
     }
 
