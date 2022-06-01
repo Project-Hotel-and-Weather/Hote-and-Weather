@@ -11,6 +11,7 @@ import pl.sda.hotelweatherproject.service.WeatherService;
 import java.io.IOException;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class PerfectionLocation {
 
     private final HotelService hotelService;
@@ -23,7 +24,6 @@ public class PerfectionLocation {
     }
 
     @GetMapping(value = "/weather")
-    @CrossOrigin(origins = "*")
     public WeatherModel getWeatherInfo(
 //            @RequestParam Double longitude,
 //            @RequestParam Double latitude)
@@ -33,7 +33,6 @@ public class PerfectionLocation {
     }
 
     @GetMapping(value = "/hotel")
-    @CrossOrigin(origins = "*")
     public HotelModel getHotelInfo() throws IOException {
         return hotelService.getHotelInfo();
     }
