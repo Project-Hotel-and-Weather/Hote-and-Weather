@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.sda.hotelweatherproject.dtos.Example;
+import pl.sda.hotelweatherproject.model.HotelModel;
 import pl.sda.hotelweatherproject.response.*;
 import pl.sda.hotelweatherproject.webclient.ExchangeClient;
 import pl.sda.hotelweatherproject.webclient.HotelClient;
@@ -13,6 +14,8 @@ import pl.sda.hotelweatherproject.webclient.HotelClient;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -21,7 +24,7 @@ public class HotelService {
     private final HotelClient hotelClient;
     private final ExchangeClient exchangeClient;
 
-    public String getHotelInfo() throws IOException {
+    public HotelModel getHotelInfo() throws IOException {
 
         String path = "src/main/resources/response.json";
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
@@ -47,7 +50,11 @@ public class HotelService {
             }
         }
         Double price = convertCurrency(code, amount);
-        return name + price;
+
+        return HotelModel.builder()
+                .name(name)
+                .price(price)
+                .build();
     }
 
     public Double convertCurrency(String code, Integer amount) throws JsonProcessingException {
