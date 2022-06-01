@@ -22,7 +22,7 @@ public class PerfectionLocation {
         this.weatherService = weatherService;
     }
 
-    @GetMapping("/search")
+    @GetMapping("/")
     public String getHomePage(
             @RequestParam Double longitude,
             @RequestParam Double latitude) throws IOException {
