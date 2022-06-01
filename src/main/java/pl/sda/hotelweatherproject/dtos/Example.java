@@ -1,16 +1,13 @@
 
 package pl.sda.hotelweatherproject.dtos;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javax.annotation.Generated;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Generated;
+import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -23,12 +20,49 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class Example {
 
 
-    @JsonProperty("rates")
-    private List<Rate> rates = null;
+    @SerializedName("table")
+    @Expose
+    private String table;
+    @SerializedName("currency")
+    @Expose
+    private String currency;
+    @SerializedName("code")
+    @Expose
+    private String code;
+    @SerializedName("rates")
+    @Expose
+    private List<Value> rates = null;
 
-    @JsonProperty("rates")
-    public List<Rate> getRates() {
+    public String getTable() {
+        return table;
+    }
+
+    public void setTable(String table) {
+        this.table = table;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public List<Value> getRates() {
         return rates;
+    }
+
+    public void setRates(List<Value> rates) {
+        this.rates = rates;
     }
 
 
