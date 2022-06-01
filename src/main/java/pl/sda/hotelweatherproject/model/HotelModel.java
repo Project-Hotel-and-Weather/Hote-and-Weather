@@ -17,6 +17,4 @@ import java.util.Date;
 public class HotelModel {
     String name;
     Double price;
-
-
 }

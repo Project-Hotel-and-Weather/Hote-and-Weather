@@ -7,7 +7,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class Weather {
+public class WeatherModel {
 
     double temp;
     String name;

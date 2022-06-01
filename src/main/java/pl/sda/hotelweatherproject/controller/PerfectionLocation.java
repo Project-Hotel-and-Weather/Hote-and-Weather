@@ -1,22 +1,14 @@
 package pl.sda.hotelweatherproject.controller;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import org.apache.tomcat.util.json.JSONParser;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pl.sda.hotelweatherproject.model.HotelModel;
-import pl.sda.hotelweatherproject.model.Weather;
+import pl.sda.hotelweatherproject.model.WeatherModel;
 import pl.sda.hotelweatherproject.service.HotelService;
 import pl.sda.hotelweatherproject.service.WeatherService;
 
-import java.awt.*;
 import java.io.IOException;
-import java.util.Collections;
 
 @RestController
 public class PerfectionLocation {
@@ -31,7 +23,8 @@ public class PerfectionLocation {
     }
 
     @GetMapping(value = "/weather")
-    public Weather getWeatherInfo(
+    @CrossOrigin(origins = "*")
+    public WeatherModel getWeatherInfo(
 //            @RequestParam Double longitude,
 //            @RequestParam Double latitude)
     )throws IOException {
@@ -40,6 +33,7 @@ public class PerfectionLocation {
     }
 
     @GetMapping(value = "/hotel")
+    @CrossOrigin(origins = "*")
     public HotelModel getHotelInfo() throws IOException {
         return hotelService.getHotelInfo();
     }
