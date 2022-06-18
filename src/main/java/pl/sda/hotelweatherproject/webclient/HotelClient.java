@@ -1,19 +1,28 @@
 package pl.sda.hotelweatherproject.webclient;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpHeaders;
-import org.springframework.web.client.RestTemplate;
 
-@Configuration
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
+
+@Component
 public class HotelClient {
 
-    private final String secretHotel = "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDk1ODMyNzEsImlhdCI6MTY0OTU4MTQ3MSwibmJmIjoxNjQ5NTgxNDcxLCJpZGVudGl0eSI6MTIxNn0.rku-Vy1EpXktGJlNT7XPfrVGTFunCZIdSoF8GTncco4";
-    private RestTemplate restTemplate = new RestTemplate();
-    private final String HOTEL_URL = "https://api.makcorps.com/free";
+    public String getHotel(String lat, String lon) throws UnirestException {
+        HttpResponse<String> response = Unirest.get(
+                        "https://sandbox.impala.travel/v1/hotels?start=2022-07-11&end=2022-07-19&latitude={lat}&longitude={long}&radius=25000")
+                .header("x-api-key", "sandb_3RKOMF9H9pTeIRu5ZXSNuSUuJfKQALIzPlakXCZk")
+//               .routeParam("startDate", String.valueOf(startDate))
+//               .routeParam("endDate", String.valueOf(endDate))
+                .routeParam("lat", lat)
+                .routeParam("long", lon)
+                .asString();
+        return response.getBody();
 
-    public String getHotel(String location){
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Authorization", secretHotel);
-        return restTemplate.getForObject(HOTEL_URL + "/{location}", String.class, location);
+
     }
 }
