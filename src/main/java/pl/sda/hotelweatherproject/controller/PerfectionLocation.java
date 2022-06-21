@@ -41,7 +41,7 @@ public class PerfectionLocation {
           @PathVariable (value = "country") String con)
 //          @RequestParam Date startDate,
 //          @RequestParam Date endDate)
-          throws IOException, UnirestException, ParseException {
+          throws Exception {
     return hotelService.getHotelInfo(location, con);
   }
 }
