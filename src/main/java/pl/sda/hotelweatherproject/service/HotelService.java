@@ -47,8 +47,8 @@ public class HotelService {
         String code = "";
         List<HotelModel> hotelsList = new ArrayList<>();
         Double amount = 0.0;
-        String position = lon + "," + lat;
-        List<HotelModel> hotelMockModel = getHotelMockModel(location, con, gson, response, hotelsList, position);
+        String position = lat + "," + lon;
+        List<HotelModel> hotelMockModel = getHotelMockModel(con, gson, hotelsList, position);
         if (!response.getData().isEmpty()) {
             for (Datum datum : response.getData()) {
                 List<String> formattedList = new ArrayList<>();
@@ -98,7 +98,7 @@ public class HotelService {
         return hotelsList;
     }
 
-    private List<HotelModel> getHotelMockModel(String location, String con, Gson gson, Response response, List<HotelModel> hotelsList, String position) throws Exception {
+    private List<HotelModel> getHotelMockModel(String con, Gson gson, List<HotelModel> hotelsList, String position) throws Exception {
         String formattedAddress = "";
         String entityName = "";
         String roomTypeString = "";
@@ -140,7 +140,6 @@ public class HotelService {
         HotelAddress hotelAddress = gson.fromJson(json, HotelAddress.class);
         for (ResourceSet resourceSets : hotelAddress.getResourceSets()) {
             int range = 0;
-
             for (Resource resource : resourceSets.getResources()) {
                 for (BusinessesAtLocation businessesAtLocation : resource.getBusinessesAtLocation()) {
                     String locality = businessesAtLocation.getBusinessAddress().getLocality();

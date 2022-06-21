@@ -67,8 +67,8 @@ public class CityClient {
             List<Object> resultList = currentSession.createQuery("SELECT w.city, w.longitude, w.latitude from WorldCitiesDto as w where w.city = :location").setParameter("location", capitalizeCity).getResultList();
             for (Iterator<Object> it = resultList.iterator(); it.hasNext();) {
                 Object[] objects = (Object[]) it.next();
-               lang = (Double) objects[1];
-               lat = (Double) objects[2];
+                lang = (Double) objects[2];
+                lat = (Double) objects[1];
             }
         }
         List<String> parameters = new ArrayList<>();
