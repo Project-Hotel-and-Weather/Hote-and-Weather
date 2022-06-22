@@ -18,11 +18,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class CityClient {
-    private final HibernateConfiguration hibernateConfiguration;
 
-    public CityClient(HibernateConfiguration hibernateConfiguration) {
-        this.hibernateConfiguration = hibernateConfiguration;
-    }
 
     public List<String> findLocation(String location) throws IOException {
 
@@ -73,6 +69,7 @@ public class CityClient {
                 parameters.add(String.valueOf(lat));
             }
         }
+        session.close();
 
         return parameters;
     }
