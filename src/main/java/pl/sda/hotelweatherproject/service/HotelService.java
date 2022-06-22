@@ -38,7 +38,7 @@ public class HotelService {
     public List<HotelModel> getHotelInfo(String location) throws Exception {
         List<String> localization = cityClient.findLocation(location);
         List<HotelModel> hotelsList = new ArrayList<>();
-        if (localization.isEmpty()){
+        if (localization.isEmpty()) {
             hotelsList.add(null);
             return hotelsList;
         }
