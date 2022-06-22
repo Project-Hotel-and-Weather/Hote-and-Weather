@@ -2,6 +2,7 @@ package pl.sda.hotelweatherproject.jsonClient;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.text.WordUtils;
+import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Component;
 import pl.sda.hotelweatherproject.configuration.HibernateConfiguration;
@@ -17,17 +18,23 @@ import java.util.stream.Collectors;
 
 @Component
 public class CityClient {
-    HibernateConfiguration hibernateConfiguration;
+    private final HibernateConfiguration hibernateConfiguration;
+
+    public CityClient(HibernateConfiguration hibernateConfiguration) {
+        this.hibernateConfiguration = hibernateConfiguration;
+    }
+
     public List<String> findLocation(String location) throws IOException {
 
         Double lat = 0.0;
         Double lang = 0.0;
-
+        Session session = HibernateConfiguration.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
         String capitalizeCity = WordUtils.capitalizeFully(location);
         capitalizeCity.replaceAll("\\+", " ");
 
 
-        Object uniqueResult = hibernateConfiguration.Configuration().createQuery("SELECT w.city from WorldCitiesDto as w where w.city = :location").setParameter("location", capitalizeCity).uniqueResult();
+        Object uniqueResult = session.createQuery("SELECT w.city from WorldCitiesDto as w where w.city = :location").setParameter("location", capitalizeCity).uniqueResult();
         if (uniqueResult == null) {
             ObjectMapper om = new ObjectMapper();
             String path = "src/main/resources/worldCities.json";
@@ -48,15 +55,15 @@ public class CityClient {
                     worldCitiesDto.setLongitude(longitude.get(j));
                     worldCitiesDto.setLatitude(latitude.get(j));
                     worldCitiesDto.setIso2(iso2.get(j));
-                    hibernateConfiguration.Configuration().save(worldCitiesDto);
+                    session.save(worldCitiesDto);
                     break;
                 }
             }
 
-            hibernateConfiguration.Configuration().getTransaction().commit();
-            hibernateConfiguration.Configuration().close();
+            transaction.commit();
+            session.close();
         } else {
-            List<Object> resultList = hibernateConfiguration.Configuration().createQuery("SELECT w.city, w.longitude, w.latitude from WorldCitiesDto as w where w.city = :location").setParameter("location", capitalizeCity).getResultList();
+            List<Object> resultList = session.createQuery("SELECT w.city, w.longitude, w.latitude from WorldCitiesDto as w where w.city = :location").setParameter("location", capitalizeCity).getResultList();
             for (Object o : resultList) {
                 Object[] objects = (Object[]) o;
                 lang = (Double) objects[2];
