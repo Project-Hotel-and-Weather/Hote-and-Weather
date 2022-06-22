@@ -27,21 +27,21 @@ public class PerfectionLocation {
     this.weatherService = weatherService;
   }
 
-  @GetMapping(value = "/weather&{location}&{country}")
+  @GetMapping(value = "/weather?{location}")
   public WeatherModel getWeatherInfo(
-         @PathVariable (value = "location") String location,
-         @PathVariable (value = "country") String con)
+         @PathVariable (value = "location") String location)
+//         @PathVariable (value = "country") String con)
           throws IOException {
-    return weatherService.getWeatherInfo(location, con);
+    return weatherService.getWeatherInfo(location);
   }
 
-  @GetMapping(value = "/hotel&{location}&{country}")
+  @GetMapping(value = "/hotel?{location}")
   public List<HotelModel> getHotelInfo(
-          @PathVariable (value = "location") String location,
-          @PathVariable (value = "country") String con)
+          @PathVariable (value = "location") String location)
+//          @PathVariable (value = "country") String con)
 //          @RequestParam Date startDate,
 //          @RequestParam Date endDate)
           throws Exception {
-    return hotelService.getHotelInfo(location, con);
+    return hotelService.getHotelInfo(location);
   }
 }

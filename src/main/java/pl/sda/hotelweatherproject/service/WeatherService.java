@@ -29,9 +29,9 @@ public class WeatherService {
     this.cityClient = cityClient;
   }
 
-  public WeatherModel getWeatherInfo(String location,String con) throws IOException {
+  public WeatherModel getWeatherInfo(String location) throws IOException {
 
-    List<String> localization = cityClient.findLocation(location,con);
+    List<String> localization = cityClient.findLocation(location);
     String lon = localization.get(1);
     String lat = localization.get(0);
     String url = "https://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + lon +"&appid=2d75c857e890f7742729cf3b29c7631f&units=metric&lang=pl";

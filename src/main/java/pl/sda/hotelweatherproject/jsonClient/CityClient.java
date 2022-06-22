@@ -20,8 +20,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class CityClient {
-    public List<String> findLocation(String location, String coun) throws IOException {
-
+    public List<String> findLocation(String location) throws IOException {
 
         Double lat = 0.0;
         Double lang = 0.0;
@@ -32,7 +31,6 @@ public class CityClient {
         currentSession.beginTransaction();
 
         String capitalizeCity = WordUtils.capitalizeFully(location);
-        String capitalizeCountry = coun.toUpperCase();
         Object uniqueResult = currentSession.createQuery("SELECT w.city from WorldCitiesDto as w where w.city = :location").setParameter("location", capitalizeCity).uniqueResult();
         if (uniqueResult == null) {
             ObjectMapper om = new ObjectMapper();
@@ -44,21 +42,18 @@ public class CityClient {
             List<Double> latitude = Arrays.stream(worldCities).map(WorldCities::getLat).collect(Collectors.toList());
             List<String> iso2 = Arrays.stream(worldCities).map(WorldCities::getIso2).collect(Collectors.toList());
 
-
             WorldCitiesDto worldCitiesDto = new WorldCitiesDto();
 
             for (int j = 0; j < cityAscii.size(); j++) {
-                worldCitiesDto.setCity(cityAscii.get(j));
-                worldCitiesDto.setLongitude(longitude.get(j));
-                worldCitiesDto.setLatitude(latitude.get(j));
-                worldCitiesDto.setIso2(iso2.get(j));
-
-                if (capitalizeCity.equals(cityAscii.get(j)) && capitalizeCountry.equals(iso2.get(j))) {
+                if (capitalizeCity.equals(cityAscii.get(j))) {
                     lat = longitude.get(j);
                     lang = latitude.get(j);
+                    worldCitiesDto.setCity(cityAscii.get(j));
+                    worldCitiesDto.setLongitude(longitude.get(j));
+                    worldCitiesDto.setLatitude(latitude.get(j));
+                    worldCitiesDto.setIso2(iso2.get(j));
                     break;
                 }
-
             }
             currentSession.save(worldCitiesDto);
             currentSession.getTransaction().commit();

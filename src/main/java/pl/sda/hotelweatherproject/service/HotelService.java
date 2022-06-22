@@ -35,8 +35,8 @@ public class HotelService {
         this.cityClient = cityClient;
     }
 
-    public List<HotelModel> getHotelInfo(String location, String con) throws Exception {
-        List<String> localization = cityClient.findLocation(location, con);
+    public List<HotelModel> getHotelInfo(String location) throws Exception {
+        List<String> localization = cityClient.findLocation(location);
         String lon = localization.get(1);
         String lat = localization.get(0);
         Reader inputString = new StringReader(hotelClient.getHotel(lat, lon));
@@ -48,7 +48,7 @@ public class HotelService {
         List<HotelModel> hotelsList = new ArrayList<>();
         Double amount = 0.0;
         String position = lat + "," + lon;
-        List<HotelModel> hotelMockModel = getHotelMockModel(con, gson, hotelsList, position);
+        List<HotelModel> hotelMockModel = getHotelMockModel(gson, hotelsList, position);
         if (!response.getData().isEmpty()) {
             for (Datum datum : response.getData()) {
                 List<String> formattedList = new ArrayList<>();
@@ -98,7 +98,7 @@ public class HotelService {
         return hotelsList;
     }
 
-    private List<HotelModel> getHotelMockModel(String con, Gson gson, List<HotelModel> hotelsList, String position) throws Exception {
+    private List<HotelModel> getHotelMockModel(Gson gson, List<HotelModel> hotelsList, String position) throws Exception {
         String formattedAddress = "";
         String entityName = "";
         String roomTypeString = "";
@@ -169,7 +169,6 @@ public class HotelService {
                         }
                         hotelsList.add(HotelModel.builder()
                                 .city(WordUtils.capitalizeFully(locality))
-                                .countryName(WordUtils.capitalizeFully(con))
                                 .line1(formattedAddress)
                                 .name(entityName)
                                 .roomName(roomTypeString)
