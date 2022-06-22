@@ -151,7 +151,7 @@ public class HotelService {
                             roomTypeString = roomType.get(rangeRoomType);
                         }
                         price = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
-                        double price2 = Math.round(price * 100.0) / 100.0;
+                        int price2 = (int) (Math.round(price * 100.0) / 100.0);
 
 
                         range = r.nextInt(max - min) + min;
@@ -172,7 +172,7 @@ public class HotelService {
                                 .line1(formattedAddress)
                                 .name(entityName)
                                 .roomName(roomTypeString)
-                                .price(price2)
+                                .price((double) price2)
                                 .formatted(finalFormatted)
                                 .build());
                     }
@@ -187,7 +187,7 @@ public class HotelService {
         ObjectMapper mapper = new ObjectMapper();
         Example example = mapper.readValue(response, Example.class);
         Double mid = example.getRates().get(0).getMid();
-        return Math.round((amount / mid) * 100) / 100.00;
+        return (int) Math.round((amount / mid) * 100) / 100.00;
     }
 
     private static String readUrl(String urlString) throws Exception {

@@ -56,10 +56,11 @@ public class CityClient {
                     worldCitiesDto.setLongitude(longitude.get(j));
                     worldCitiesDto.setLatitude(latitude.get(j));
                     worldCitiesDto.setIso2(iso2.get(j));
+                    currentSession.save(worldCitiesDto);
                     break;
                 }
             }
-            currentSession.save(worldCitiesDto);
+
             currentSession.getTransaction().commit();
             sessionFactory.close();
         } else {
