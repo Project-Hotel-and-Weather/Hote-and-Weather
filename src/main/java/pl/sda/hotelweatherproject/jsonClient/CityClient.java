@@ -70,6 +70,7 @@ public class CityClient {
             }
         }
         session.close();
+        HibernateConfiguration.close();
 
         return parameters;
     }

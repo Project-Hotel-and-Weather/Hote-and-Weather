@@ -30,7 +30,6 @@ public class PerfectionLocation {
   @GetMapping(value = "/weather")
   public WeatherModel getWeatherInfo(
           @RequestParam String location)
-//         @PathVariable (value = "country") String con)
           throws IOException {
     return weatherService.getWeatherInfo(location);
   }
