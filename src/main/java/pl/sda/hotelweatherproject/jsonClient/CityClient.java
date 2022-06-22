@@ -3,6 +3,7 @@ package pl.sda.hotelweatherproject.jsonClient;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.text.WordUtils;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Component;
 import pl.sda.hotelweatherproject.configuration.HibernateConfiguration;
@@ -25,6 +26,7 @@ public class CityClient {
         double lat;
         double lang;
         Session session = HibernateConfiguration.getSessionFactory().openSession();
+
         Transaction transaction = session.beginTransaction();
         String capitalizeCity = WordUtils.capitalizeFully(location);
         capitalizeCity.replaceAll("\\+", " ");
@@ -57,8 +59,7 @@ public class CityClient {
                     break;
                 }
             }
-            transaction.commit();
-            session.close();
+
         } else {
             List<Object> resultList = session.createQuery("SELECT w.city, w.longitude, w.latitude from WorldCitiesDto as w where w.city = :location").setParameter("location", capitalizeCity).getResultList();
             for (Object o : resultList) {
@@ -69,6 +70,7 @@ public class CityClient {
                 parameters.add(String.valueOf(lat));
             }
         }
+        transaction.commit();
         session.close();
 
         return parameters;
