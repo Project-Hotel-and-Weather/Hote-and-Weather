@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 @Component
@@ -31,6 +32,9 @@ public class CityClient {
         currentSession.beginTransaction();
 
         String capitalizeCity = WordUtils.capitalizeFully(location);
+        capitalizeCity.replaceAll("\\+", " ");
+
+
         Object uniqueResult = currentSession.createQuery("SELECT w.city from WorldCitiesDto as w where w.city = :location").setParameter("location", capitalizeCity).uniqueResult();
         if (uniqueResult == null) {
             ObjectMapper om = new ObjectMapper();
