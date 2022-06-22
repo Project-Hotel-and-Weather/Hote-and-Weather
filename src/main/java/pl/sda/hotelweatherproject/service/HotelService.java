@@ -37,6 +37,11 @@ public class HotelService {
 
     public List<HotelModel> getHotelInfo(String location) throws Exception {
         List<String> localization = cityClient.findLocation(location);
+        List<HotelModel> hotelsList = new ArrayList<>();
+        if (localization.isEmpty()){
+            hotelsList.add(null);
+            return hotelsList;
+        }
         String lon = localization.get(1);
         String lat = localization.get(0);
         Reader inputString = new StringReader(hotelClient.getHotel(lat, lon));
@@ -45,7 +50,6 @@ public class HotelService {
         Response response = gson.fromJson(bufferedReader, Response.class);
         String name = "";
         String code = "";
-        List<HotelModel> hotelsList = new ArrayList<>();
         Double amount = 0.0;
         String position = lat + "," + lon;
         List<HotelModel> hotelMockModel = getHotelMockModel(gson, hotelsList, position);

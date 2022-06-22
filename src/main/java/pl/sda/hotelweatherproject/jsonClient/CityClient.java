@@ -26,13 +26,13 @@ public class CityClient {
 
     public List<String> findLocation(String location) throws IOException {
 
-        Double lat = 0.0;
-        Double lang = 0.0;
+        double lat;
+        double lang;
         Session session = HibernateConfiguration.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         String capitalizeCity = WordUtils.capitalizeFully(location);
         capitalizeCity.replaceAll("\\+", " ");
-
+        List<String> parameters = new ArrayList<>();
 
         Object uniqueResult = session.createQuery("SELECT w.city from WorldCitiesDto as w where w.city = :location").setParameter("location", capitalizeCity).uniqueResult();
         if (uniqueResult == null) {
@@ -56,10 +56,11 @@ public class CityClient {
                     worldCitiesDto.setLatitude(latitude.get(j));
                     worldCitiesDto.setIso2(iso2.get(j));
                     session.save(worldCitiesDto);
+                    parameters.add(String.valueOf(lang));
+                    parameters.add(String.valueOf(lat));
                     break;
                 }
             }
-
             transaction.commit();
             session.close();
         } else {
@@ -68,11 +69,10 @@ public class CityClient {
                 Object[] objects = (Object[]) o;
                 lang = (Double) objects[2];
                 lat = (Double) objects[1];
+                parameters.add(String.valueOf(lang));
+                parameters.add(String.valueOf(lat));
             }
         }
-        List<String> parameters = new ArrayList<>();
-        parameters.add(String.valueOf(lang));
-        parameters.add(String.valueOf(lat));
 
         return parameters;
     }
