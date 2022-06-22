@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 @Component
 public class CityClient {
 
-
+@Transac
     public List<String> findLocation(String location) throws IOException {
 
         double lat;
@@ -70,7 +70,6 @@ public class CityClient {
             }
         }
         session.close();
-        HibernateConfiguration.close();
 
         return parameters;
     }
