@@ -1,15 +1,12 @@
 package pl.sda.hotelweatherproject.service;
 
 import com.google.gson.Gson;
-import org.joda.time.DateTimeZone;
 import org.springframework.stereotype.Service;
 import pl.sda.hotelweatherproject.jsonClient.CityClient;
 import pl.sda.hotelweatherproject.model.WeatherModel;
 import pl.sda.hotelweatherproject.response.Daily;
 import pl.sda.hotelweatherproject.response.ExampleWeather;
-import pl.sda.hotelweatherproject.response.ResponseWeather;
 
-import javax.swing.text.DateFormatter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,15 +15,11 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
-import java.util.*;
-import java.util.function.UnaryOperator;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.TimeZone;
 
 @Service
 public class WeatherService {
