@@ -7,6 +7,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -45,13 +48,13 @@ class HotelWeatherProjectApplicationTestsModel {
                 .andExpect(jsonPath("$.concat(null)").value(""));
     }
 
-//    @Test
-//    void findAWeatherForCityThatExists() throws Exception {
-//        mockMvc.perform(get("/weather")
-//                        .param("location", "barcelona")).andDo(print()).andExpect(status().isOk())
-//                .andExpect(content().contentType("application/json"))
-//                .andExpect(jsonPath("$.name").value("Sant Pere, Santa Caterina i La Ribera"));
-//    }
+    @Test
+    void findAWeatherForCityThatExists() throws Exception {
+        mockMvc.perform(get("/weather")
+                        .param("location", "barcelona")).andDo(print()).andExpect(status().isOk())
+                .andExpect(content().contentType("application/json"))
+                .andExpect(jsonPath("$.name").value("Sant Pere, Santa Caterina i La Ribera"));
+    }
 
     @Test
     void notFindAWeatherThatExistsAndReturnNull() throws Exception {
