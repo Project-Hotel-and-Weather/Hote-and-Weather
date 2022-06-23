@@ -1,6 +1,7 @@
 package pl.sda.hotelweatherproject.service;
 
 import com.google.gson.Gson;
+import org.joda.time.DateTimeZone;
 import org.springframework.stereotype.Service;
 import pl.sda.hotelweatherproject.jsonClient.CityClient;
 import pl.sda.hotelweatherproject.model.WeatherModel;
@@ -19,12 +20,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -55,7 +54,9 @@ public class WeatherService {
         SimpleDateFormat time = new SimpleDateFormat("HH:mm");
 
         List<WeatherModel> weatherModelList = new ArrayList<>();
-
+        String timezone = exampleWeather.getTimezone();
+        ZoneId of = ZoneId.of(timezone);
+        time.setTimeZone(TimeZone.getTimeZone(of));
         for (Daily daily : exampleWeather.getDaily()) {
             int dt = daily.getDt();
             Integer sunrise = daily.getSunrise();
@@ -63,6 +64,7 @@ public class WeatherService {
             Date timeStamp = new Date(dt * 1000L);
             Date sunriseTime = new Date(sunrise * 1000L);
             Date sunsetTime = new Date(sunset * 1000L);
+
             String dateParse = data.format(timeStamp);
             String dayOfTheWeekParse = dayOfTheWeek.format(timeStamp);
             String sunriseParse = time.format(sunriseTime);
