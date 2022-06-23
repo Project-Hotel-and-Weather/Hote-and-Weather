@@ -4,14 +4,7 @@ package pl.sda.hotelweatherproject.model;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import pl.sda.hotelweatherproject.response.Datum;
-import pl.sda.hotelweatherproject.response.Response;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.Date;
 import java.util.List;
 
 @Builder

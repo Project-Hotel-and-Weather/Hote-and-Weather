@@ -22,8 +22,8 @@ public class HotelClient {
                 .header("x-api-key", "sandb_3RKOMF9H9pTeIRu5ZXSNuSUuJfKQALIzPlakXCZk")
               .routeParam("startDate", String.valueOf(now))
                .routeParam("endDate", String.valueOf(plus))
-                .routeParam("lat", lon)
-                .routeParam("long", lat)
+                .routeParam("lat", lat)
+                .routeParam("long", lon)
                 .asString();
         return response.getBody();
 

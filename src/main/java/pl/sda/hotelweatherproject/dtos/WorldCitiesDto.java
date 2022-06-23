@@ -15,22 +15,15 @@ public class WorldCitiesDto {
     private Double longitude;
     private String iso2;
 
-    public String getIso2() {
-        return iso2;
-    }
+    public WorldCitiesDto(){
 
-    public void setIso2(String iso2) {
-        this.iso2 = iso2;
     }
-
-    public WorldCitiesDto() {
-    }
-
-    public WorldCitiesDto(Long id, String city, Double latitude, Double longitude) {
+    public WorldCitiesDto(Long id, String city, Double latitude, Double longitude, String iso2) {
         this.id = id;
         this.city = city;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.iso2 = iso2;
     }
 
     public Long getId() {
@@ -45,20 +38,28 @@ public class WorldCitiesDto {
         return city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
-    }
-
     public Double getLongitude() {
         return longitude;
+    }
+
+    public String getIso2() {
+        return iso2;
+    }
+
+    public void setIso2(String iso2) {
+        this.iso2 = iso2;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
     }
 
     public void setLongitude(Double longitude) {
