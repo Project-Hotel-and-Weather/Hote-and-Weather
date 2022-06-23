@@ -29,30 +29,36 @@ class HotelWeatherProjectApplicationTestsModel {
     @Test
     void findAHotelForCityThatExists() throws Exception {
         mockMvc.perform(get("/hotel")
-                        .param("location", "barcelona")).andDo(print()).andExpect(status().isOk())
+                        .param("location", "barcelona"))
+                .andDo(print())
+                .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"));
     }
 
     @Test
     void notFindAHotelThatExistsAndReturnNull() throws Exception {
         mockMvc.perform(get("/hotel")
-                .param("location","Vladywostok")).andDo(print()).andExpect(status().isOk())
+                .param("location","Vladywostok"))
+                .andDo(print())
+                .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
                 .andExpect(jsonPath("$.concat(null)").value(""));
     }
 
-    @Test
-    void findAWeatherForCityThatExists() throws Exception {
-        mockMvc.perform(get("/weather")
-                        .param("location", "barcelona")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().contentType("application/json"))
-                .andExpect(jsonPath("$.name").value("Sant Pere, Santa Caterina i La Ribera"));
-    }
+//    @Test
+//    void findAWeatherForCityThatExists() throws Exception {
+//        mockMvc.perform(get("/weather")
+//                        .param("location", "barcelona")).andDo(print()).andExpect(status().isOk())
+//                .andExpect(content().contentType("application/json"))
+//                .andExpect(jsonPath("$.name").value("Sant Pere, Santa Caterina i La Ribera"));
+//    }
 
     @Test
     void notFindAWeatherThatExistsAndReturnNull() throws Exception {
         mockMvc.perform(get("/hotel")
-                        .param("location","Vladywostok")).andDo(print()).andExpect(status().isOk())
+                        .param("location","Vladywostok"))
+                .andDo(print())
+                .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
                 .andExpect(jsonPath("$.concat(null)").value(""));
     }

@@ -1,21 +1,30 @@
 package pl.sda.hotelweatherproject.service;
 
 import com.google.gson.Gson;
-import lombok.Builder;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.sda.hotelweatherproject.jsonClient.CityClient;
-import pl.sda.hotelweatherproject.response.Root;
-import pl.sda.hotelweatherproject.response.Weather;
 import pl.sda.hotelweatherproject.model.WeatherModel;
+import pl.sda.hotelweatherproject.response.Daily;
+import pl.sda.hotelweatherproject.response.ExampleWeather;
+import pl.sda.hotelweatherproject.response.ResponseWeather;
 
+import javax.swing.text.DateFormatter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -23,42 +32,58 @@ import java.util.stream.Stream;
 @Service
 public class WeatherService {
 
-  private final CityClient cityClient;
+    private final CityClient cityClient;
 
-  public WeatherService(CityClient cityClient) {
-    this.cityClient = cityClient;
-  }
-
-  public WeatherModel getWeatherInfo(String location) throws IOException {
-
-    List<String> localization = cityClient.findLocation(location);
-    String lon = localization.get(1);
-    String lat = localization.get(0);
-    String url = "https://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + lon +"&appid=2d75c857e890f7742729cf3b29c7631f&units=metric&lang=pl";
-    InputStream is = new URL(url).openStream();
-    Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
-
-    Gson gson = new Gson();
-    Root root = gson.fromJson(reader, Root.class);
-
-    String description = "";
-    for (Weather weather : root.weather) {
-      description = weather.description;
+    public WeatherService(CityClient cityClient) {
+        this.cityClient = cityClient;
     }
 
-    UnaryOperator<String> capitalize = str -> str.substring(0, 1).toUpperCase() + str.substring(1)
-        .toLowerCase();
-    String result = Stream.of(description.split(" "))
-        .map(capitalize)
-        .collect(Collectors.joining(" "));
+    public List<WeatherModel> getWeatherInfo(String location) throws IOException, ParseException {
 
-    double temp = root.main.temp;
-    String name = root.name;
+        List<String> localization = cityClient.findLocation(location);
+        String lon = localization.get(1);
+        String lat = localization.get(0);
+        String url = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly,minutely,alerts&appid=2d75c857e890f7742729cf3b29c7631f&units=metric&lang=en";
+        InputStream is = new URL(url).openStream();
+        Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
 
-    return WeatherModel.builder()
-        .result(result)
-        .temp(temp)
-        .name(name)
-        .build();
-  }
+        Gson gson = new Gson();
+        ExampleWeather exampleWeather = gson.fromJson(reader, ExampleWeather.class);
+
+        SimpleDateFormat data = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat dayOfTheWeek = new SimpleDateFormat("EEEE");
+        SimpleDateFormat time = new SimpleDateFormat("HH:mm");
+
+        List<WeatherModel> weatherModelList = new ArrayList<>();
+
+        for (Daily daily : exampleWeather.getDaily()) {
+            int dt = daily.getDt();
+            Integer sunrise = daily.getSunrise();
+            Integer sunset = daily.getSunset();
+            Date timeStamp = new Date(dt * 1000L);
+            Date sunriseTime = new Date(sunrise * 1000L);
+            Date sunsetTime = new Date(sunset * 1000L);
+            String dateParse = data.format(timeStamp);
+            String dayOfTheWeekParse = dayOfTheWeek.format(timeStamp);
+            String sunriseParse = time.format(sunriseTime);
+            String sunsetParse = time.format(sunsetTime);
+            Double day = daily.getTemp().getDay();
+            Double night = daily.getTemp().getNight();
+            Integer humidity = daily.getHumidity();
+            for (int i = 0; i < daily.getWeather().size(); i++) {
+                String main = daily.getWeather().get(i).getMain();
+                weatherModelList.add(WeatherModel.builder()
+                        .date(dateParse)
+                        .dayOfTheWeek(dayOfTheWeekParse)
+                        .sunRise(sunriseParse)
+                        .sunSet(sunsetParse)
+                        .tempDay(day.intValue())
+                        .tempNight(night.intValue())
+                        .humidity(humidity)
+                        .main(main)
+                        .build());
+            }
+        }
+        return weatherModelList;
+    }
 }
