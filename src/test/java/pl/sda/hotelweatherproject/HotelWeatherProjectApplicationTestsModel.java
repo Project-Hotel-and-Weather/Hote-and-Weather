@@ -50,10 +50,12 @@ class HotelWeatherProjectApplicationTestsModel {
 
     @Test
     void findAWeatherForCityThatExists() throws Exception {
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
         mockMvc.perform(get("/weather")
                         .param("location", "barcelona")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
-                .andExpect(jsonPath("$.name").value("Sant Pere, Santa Caterina i La Ribera"));
+                .andExpect(jsonPath("$[0].date").value(simpleDateFormat.format(date)));
     }
 
     @Test
