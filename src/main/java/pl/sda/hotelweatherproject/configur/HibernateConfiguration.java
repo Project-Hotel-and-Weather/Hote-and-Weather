@@ -4,7 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.stereotype.Component;
 
-@Component
+@org.springframework.context.annotation.Configuration
 public class HibernateConfiguration {
 
     private static final SessionFactory sessionFactory = buildSessionFactory();
