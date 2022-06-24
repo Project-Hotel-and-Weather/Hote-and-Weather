@@ -4,7 +4,7 @@ import org.apache.commons.text.WordUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Component;
-import pl.sda.hotelweatherproject.configuration.HibernateConfiguration;
+import pl.sda.hotelweatherproject.configur.HibernateConfiguration;
 import pl.sda.hotelweatherproject.dtos.WorldCitiesDto;
 import pl.sda.hotelweatherproject.readers.Readers;
 import pl.sda.hotelweatherproject.repository.CityRepository;

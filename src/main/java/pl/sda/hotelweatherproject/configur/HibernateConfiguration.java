@@ -1,8 +1,9 @@
-package pl.sda.hotelweatherproject.configuration;
+package pl.sda.hotelweatherproject.configur;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.stereotype.Component;
+
 @Component
 public class HibernateConfiguration {
 
@@ -22,7 +23,6 @@ public class HibernateConfiguration {
     }
 
     public static void close() {
-        // Close all cached and active connection pools
         getSessionFactory().close();
     }
 
