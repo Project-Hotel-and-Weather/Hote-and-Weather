@@ -2,7 +2,6 @@ package pl.sda.hotelweatherproject.configuration;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 @Component
 public class HibernateConfiguration {

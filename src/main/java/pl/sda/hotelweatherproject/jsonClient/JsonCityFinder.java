@@ -10,7 +10,6 @@ import pl.sda.hotelweatherproject.readers.Readers;
 import pl.sda.hotelweatherproject.repository.CityRepository;
 import pl.sda.hotelweatherproject.response.worldcityresponse.WorldCities;
 
-import javax.persistence.EntityManagerFactory;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,7 +42,7 @@ public class JsonCityFinder {
         List<String> parameters = new ArrayList<>();
 
         List<WorldCitiesDto> byCity = cityRepository.findByCity(capitalizeCity);
-        if (byCity == null) {
+        if (byCity.size() == 0) {
             WorldCities[] worldCities = readers.getReaderForWorldCity();
             List<String> cityAscii = Arrays.stream(worldCities).map(WorldCities::getCityAscii).collect(Collectors.toList());
             List<Double> longitude = Arrays.stream(worldCities).map(WorldCities::getLng).collect(Collectors.toList());
