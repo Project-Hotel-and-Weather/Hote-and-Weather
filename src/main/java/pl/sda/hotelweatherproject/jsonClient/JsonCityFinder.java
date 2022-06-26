@@ -22,21 +22,18 @@ public class JsonCityFinder {
     private final Readers readers;
     private final CityRepository cityRepository;
 
-    private final HibernateConfiguration hibernateConfiguration;
-    public JsonCityFinder(Readers readers, CityRepository cityRepository, HibernateConfiguration hibernateConfiguration) {
+    public JsonCityFinder(Readers readers, CityRepository cityRepository) {
         this.readers = readers;
         this.cityRepository = cityRepository;
-        this.hibernateConfiguration = hibernateConfiguration;
-
     }
 
     public List<String> findLocation(String location) throws IOException {
 
         double lat;
         double lang;
-        Session session = hibernateConfiguration.getSessionFactory().openSession();
-
+        Session session = HibernateConfiguration.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
+
         String capitalizeCity = WordUtils.capitalizeFully(location);
         capitalizeCity.replaceAll("\\+", " ");
         List<String> parameters = new ArrayList<>();
@@ -64,6 +61,7 @@ public class JsonCityFinder {
                     parameters.add(String.valueOf(lat));
                     break;
                 }
+
             }
         } else {
             Double longitude = byCity.stream().map(WorldCitiesDto::getLongitude).collect(Collectors.averagingDouble(Double::doubleValue));
@@ -71,6 +69,7 @@ public class JsonCityFinder {
             parameters.add(String.valueOf(longitude));
             parameters.add(String.valueOf(latitude));
         }
+
         transaction.commit();
         session.close();
 

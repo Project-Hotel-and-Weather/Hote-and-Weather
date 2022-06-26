@@ -20,8 +20,8 @@ public class HotelClient {
         HttpResponse<String> response = Unirest.get(
                         "https://sandbox.impala.travel/v1/hotels?start={startDate}&end={endDate}&latitude={lat}&longitude={long}&radius=25000")
                 .header("x-api-key", "sandb_3RKOMF9H9pTeIRu5ZXSNuSUuJfKQALIzPlakXCZk")
-              .routeParam("startDate", String.valueOf(now))
-               .routeParam("endDate", String.valueOf(plus))
+                .routeParam("startDate", String.valueOf(now))
+                .routeParam("endDate", String.valueOf(plus))
                 .routeParam("lat", lat)
                 .routeParam("long", lon)
                 .asString();
