@@ -26,8 +26,8 @@ public class WeatherService {
     public List<WeatherModel> getWeatherInfo(String location) throws IOException {
 
         List<String> localization = jsonCityFinder.findLocation(location);
-        String lon = localization.get(1);
-        String lat = localization.get(0);
+        String lon = localization.get(0);
+        String lat = localization.get(1);
         Reader reader = weatherReader.getReaderForWeather(lon, lat);
 
         return weatherModelList.getWeatherModelList(reader);
